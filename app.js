@@ -14,7 +14,7 @@ res.status(200).sendfile(path.join(__dirname, "Public", "Index.html"));
 
 });
 
-
-app.listen(3000, function(){
-   console.log("Access port 3000");
-})
+var port = process.env.PORT || 3000;
+app.listen(port, function(){
+   console.log(`Access port ${port}`);
+});
